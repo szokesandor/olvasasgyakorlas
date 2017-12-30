@@ -1,6 +1,7 @@
 
 var szavak = [];
 var aktualis_index = -1;
+var olvasottszoszam;
 function init()
 {
   load_settings();
@@ -11,8 +12,9 @@ function init()
   $('#button_next').focus();
   $('#button_next').on('click', '#button_next',   function(){ 
     kovetkezo();
-    //defaultPrevented = true;
-    //return false;
+  });
+  $('#word').on('click', function(){ 
+    kovetkezo();
   });
   $('#button_filter').on('click', '#button_filter', function(){ 
     szolistaletoltese(); 
@@ -36,6 +38,7 @@ function init()
 
 function kovetkezo()
 {
+  window.olvasottszoszam += 1;
   if (window.szavak.length > 0)
   {
     var kov = Math.floor(Math.random() * window.szavak.length);
@@ -54,6 +57,8 @@ function kovetkezo()
     {
       $('#word').html(t_szo);
     }
+    $('#olvasottszoszam').html(olvasottszoszam + ". szó");
+    
     console.log("" + kov + " " + t_szo + " " + t_szotagolt);
     return "";
   }else
@@ -65,6 +70,7 @@ function kovetkezo()
 
 function szolistaletoltese()
 {
+  window.olvasottszoszam = 0;
   save_settings();
   console.log("letöltés indul");
   var http_request = new XMLHttpRequest();
