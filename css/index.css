@@ -1,0 +1,79 @@
+/*+clearfix {*/
+FORM.BUTTON:after, DIV.word:after
+{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	font-size: 0;
+}
+FORM.BUTTON, DIV.word
+{
+	display: inline-block;
+}
+FORM.BUTTON, DIV.word
+{
+	display: block;
+	-height: 1px;
+}
+FORM.BUTTON
+{
+	text-align: center;
+	font-family: Calibri;
+	padding: 10px;
+	border: 1px ridge #E10808;
+	margin: 20px;
+	font-weight: bolder;
+	line-height: 4;
+	width: 0px;
+	vertical-align: middle;
+}
+DIV.word
+{
+	font-size: xx-large;
+	margin: 5px;
+	padding: 5px;
+	color: #000000;
+	background-color: #CDF6C8;
+  font-family: tahoma;
+  align-content: center;
+  clear: both;
+}
+DIV.full
+{
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+}
+
+DIV.header
+{
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+  background-color: #F9D4D4;
+}
+div.footer
+{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+#elvalaszt{
+  width: 30%;
+/*  height: 200px; 
+  border: 1px solid green;*/
+  float: left;
+  margin: 2px;
+}
+#statusz{
+  width: 60%;
+/*  height: 200px; 
+  border: 1px solid red;*/
+  float: left;
+  margin: 2px;
+}

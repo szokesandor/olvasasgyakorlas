@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Olvasás gyakorlás v1.0</title>
+    <!--<script src="js/szavak_0.js" type="application/javascript"></script>-->
+    <script src="js/script.js" type="application/javascript" charset="utf-8"/></script>
+    <script src="js/jquery-1.9.1.js" type="application/javascript"></script>
+    <script src="js/jquery.cookie.js" type="application/javascript"></script> 
+    <script src="js/date_format.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/cookieconsent.min.css" />
+    <script src="js/cookieconsent.min.js"></script>
+    <script type="application/javascript" charset="utf-8">
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#efefef",
+            "text": "#404040"
+          },
+          "button": {
+            "background": "#8ec760",
+            "text": "#ffffff"
+          }
+        },
+        "showLink": false,
+        "theme": "edgeless",
+        "position": "top",
+        "static": true,
+        "content": {
+          "message": "A beállítások tárolásához sütiket használok (1 hónapos élettartammal).",
+          "dismiss": "Értem"
+        }
+      })});
+    </script>  </head>
+  <body onload="init();">
+    <div id="full" class="full">
+      <div id="header" class="header">
+        Szókincs: Benedek Elek meséi (<a href="http://mek.oszk.hu/04800/04833/04833.htm" target="blank">MEK</a>) kb. 18 800 szó<br/>
+        Szavak elválasztása a <a href="http://helyesiras.mta.hu/" target="blank">http://helyesiras.mta.hu</a> segítségével.<br/>
+        <span style="font-size:x-small;">Hibákat kérem a lenti címre jelezze! Köszönöm</span>
+      </div>
+      <div id="kijeloles" class="kijeloles">
+        <form id="form_betuk" onsubmit="return szolistaletoltese();">
+          <label>&nbsp;a<input type="checkbox" name="a"></label>
+          <label>&nbsp;á<input type="checkbox" name="aa"></label>
+          <label>&nbsp;b<input type="checkbox" name="b"></label>
+          <label>&nbsp;c<input type="checkbox" name="c"></label>
+          <label>&nbsp;cs<input type="checkbox" name="cs"></label>
+          <label>&nbsp;d<input type="checkbox" name="d"></label>
+          <label>&nbsp;dz<input type="checkbox" name="dz"></label>
+          <label>&nbsp;dzs<input type="checkbox" name="dzs"></label>
+          <label>&nbsp;e<input type="checkbox" name="e"></label>
+          <label>&nbsp;é<input type="checkbox" name="ee"></label>
+          <label>&nbsp;f<input type="checkbox" name="f"></label>
+          <label>&nbsp;g<input type="checkbox" name="g"></label>
+          <label>&nbsp;gy<input type="checkbox" name="gy"></label>
+          <label>&nbsp;h<input type="checkbox" name="h"></label>
+          <label>&nbsp;i<input type="checkbox" name="i"></label>
+          <label>&nbsp;í<input type="checkbox" name="ii"></label>
+          <label>&nbsp;j<input type="checkbox" name="j"></label>
+          <label>&nbsp;k<input type="checkbox" name="k"></label>
+          <label>&nbsp;l<input type="checkbox" name="l"></label>
+          <label>&nbsp;ly<input type="checkbox" name="ly"></label>
+          <label>&nbsp;m<input type="checkbox" name="m"></label>
+          <label>&nbsp;n<input type="checkbox" name="n"></label>
+          <label>&nbsp;ny<input type="checkbox" name="ny"></label>
+          <label>&nbsp;o<input type="checkbox" name="o"></label>
+          <label>&nbsp;ó<input type="checkbox" name="oo"></label>
+          <label>&nbsp;ö<input type="checkbox" name="ooo"></label>
+          <label>&nbsp;ő<input type="checkbox" name="oooo"></label>
+          <label>&nbsp;p<input type="checkbox" name="p"></label>
+          <label>&nbsp;q<input type="checkbox" name="q"></label>
+          <label>&nbsp;r<input type="checkbox" name="r"></label>
+          <label>&nbsp;s<input type="checkbox" name="s"></label>
+          <label>&nbsp;sz<input type="checkbox" name="sz"></label>
+          <label>&nbsp;t<input type="checkbox" name="t"></label>
+          <label>&nbsp;ty<input type="checkbox" name="ty"></label>
+          <label>&nbsp;u<input type="checkbox" name="u"></label>
+          <label>&nbsp;ú<input type="checkbox" name="uu"></label>
+          <label>&nbsp;ü<input type="checkbox" name="uuu"></label>
+          <label>&nbsp;ű<input type="checkbox" name="uuuu"></label>
+          <label>&nbsp;v<input type="checkbox" name="v"></label>
+          <label>&nbsp;w<input type="checkbox" name="w"></label>
+          <label>&nbsp;x<input type="checkbox" name="x"></label>
+          <label>&nbsp;y<input type="checkbox" name="y"></label>
+          <label>&nbsp;z<input type="checkbox" name="z"></label>
+          <label>&nbsp;zs<input type="checkbox" name="zs"></label><br/>
+          szótagszám:
+            <select name="szotag_min" class="szotag_min" id="szotag_min">
+              <option value="3" selected="selected">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+            </select> -
+            <select name="szotag_max" class="szotag_max" id="szotag_max">
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12" selected="selected">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+            </select>
+          <input type="submit" id="button_filter" name="button_filter" value="Szókészlet frissítése kijelölés alapján">
+        </form> 
+      </div>
+      <div id="elvalaszt"><label>&nbsp;szótagolva<input type="checkbox" id="szotagok" name="szotagok" checked="checked"></label></div>
+      <div id="statusz">
+        <div id="szavakszama" class="szavakszama"></div>
+        <div id="frissitve" class="frissitve"></div>
+      </div>
+      <div id="word" class="word">
+      </div>
+      <div id="gomb" class="gomb">
+        <form id="form_next" onsubmit="kovetkezo();return false;">
+          <input type="submit" id="button_next" name="button_next" value="Következő" title="Következő szóhoz üsse le a SZÓKÖZ billentyűt!">
+        </form> 
+      </div>
+      <div id="footer" class="footer">
+        Készítette: Szőke Sándor - mail kukac szokesandor.hu, 2017.12.18
+      </div>
+    </div>  
+  </body>
+</html>
