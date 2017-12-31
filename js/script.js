@@ -13,9 +13,9 @@ function init()
   $('#button_next').on('click', '#button_next',   function(){ 
     kovetkezo();
   });
-  $('#word').on('click', function(){ 
-    kovetkezo();
-  });
+//  $('#word').on('click', function(){ // a gyerekek kezzel hozzaerhetnek olvasas kozben!
+//    kovetkezo();
+//  });
   $('#button_filter').on('click', '#button_filter', function(){ 
     szolistaletoltese(); 
     //defaultPrevented = true;
