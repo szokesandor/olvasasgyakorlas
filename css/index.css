@@ -86,3 +86,13 @@ div#gomb{
   width: 60%;
   float: left;
 }
+.inline-field {
+  display: inline;
+  white-space: nowrap;
+}
+/*.szotagszam{
+  clear: both;
+}*/
+.kijeloles{
+  text-align: center;
+}
